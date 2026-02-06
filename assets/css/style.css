@@ -67,5 +67,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   overflow-wrap: break-word;
 }
 
-.tagline-accent{ color:#D81B60; }
+.about-tagline{
+  color: #111827;     /* 黑色 */
+  font-weight: 700;   /* 加粗 */
+}
 
