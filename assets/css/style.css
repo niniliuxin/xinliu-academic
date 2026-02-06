@@ -71,4 +71,6 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   color: #111827;     /* 黑色 */
   font-weight: 700;   /* 加粗 */
 }
+.icon-rg svg { width: 18px; height: 18px; }
+.icon-rg text { letter-spacing: 0.08em; }
 
