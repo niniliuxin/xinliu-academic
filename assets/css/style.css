@@ -321,7 +321,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 /* ===== Content pages (e.g., Publications) ===== */
 .page-title{
   margin: 52px 0 0;     /* 大标题前空两行的感觉 */
-  font-size: 26px;
+  font-size: 24px;
   letter-spacing: .10em;
   text-transform: uppercase;
   color: #111827;
@@ -374,9 +374,9 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 }
 /* ===== Publications page (keep consistent with Academic Career) ===== */
 .page-title{
-  margin: 42px 0 0;
-  font-size: 22px;
-  letter-spacing: .12em;
+  margin: 52px 0 0;
+  font-size: 26px;
+  letter-spacing: .10em;
   text-transform: uppercase;
   color:#111827;
 }
