@@ -515,4 +515,46 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   color:#6b7280;
   font-size: 14px;
 }
+/* list items like Academic Career */
+.item{
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  gap: 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin: 16px auto;
+  max-width: 920px;
+  text-align: left;
+}
+
+.item-date{
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.item-title{
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.item-org{
+  margin-top: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.section-subtitle{
+  margin: 38px auto 10px;
+  max-width: 920px;
+  font-size: 14px;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: #111827;
+  text-align: center;
+}
 

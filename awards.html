@@ -3,10 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xin Liu • Awards</title>
-  <meta name="description" content="Xin Liu — Awards." />
+  <title>Awards • Xin Liu</title>
+  <meta name="description" content="Awards and honours — Xin Liu." />
   <link rel="icon" href="assets/images/profile.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Page-only styles (safe). If you already added these in style.css, you can delete this <style> block. -->
+  <style>
+    .page-title{
+      margin: 52px 0 0;
+      font-size: 26px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color:#111827;
+      text-align:center;
+    }
+    .page-sub{
+      margin: 10px auto 0;
+      max-width: 920px;
+      font-size: 14px;
+      color: #6b7280;
+      text-align:center;
+      line-height: 1.8;
+    }
+    .section-subtitle{
+      margin: 44px auto 10px;
+      max-width: 920px;
+      font-size: 14px;
+      letter-spacing: .20em;
+      text-transform: uppercase;
+      color: #111827;
+      text-align: center;
+    }
+    .item{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap: 22px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin: 16px auto;
+      max-width: 920px;
+      text-align: left;
+      background:#fff;
+    }
+    .item-date{
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    .item-title{
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+      margin: 0;
+      line-height: 1.55;
+    }
+    .item-org{
+      margin-top: 6px;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.7;
+    }
+    @media (max-width:860px){
+      .item{grid-template-columns: 1fr; gap: 10px;}
+      .item-date{letter-spacing: .04em;}
+    }
+  </style>
 </head>
 
 <body>
@@ -26,103 +90,126 @@
 
     <div class="rule" aria-hidden="true"></div>
 
-    <h1 class="page-title">AWARDS</h1>
-    <p class="page-subtitle">
-      Selected awards, honours, scholarships, and recognitions.
-    </p>
+    <h1 class="page-title">AWARDS &amp; HONOURS</h1>
+    <p class="page-sub">Selected recognitions from national/embassy, provincial, municipal, and university levels.</p>
 
-    <!-- ========= Section 1 (edit items) ========= -->
-    <section class="section">
-  <h2 class="section-title">AWARDS &amp; HONOURS</h2>
+    <!-- Embassy-level -->
+    <h2 class="section-subtitle">Embassy-level</h2>
 
-  <h3 class="subsection-title">National Level / Embassy-level</h3>
-  <ul class="cv-list">
-    <li class="cv-item">
-      <span class="cv-year">2019</span>
-      <span class="cv-main">Outstanding Leader of the Chinese Student and Scholar Association</span>
-      <span class="cv-meta">— Embassy of the People’s Republic of China in the Kingdom of Belgium, Belgium</span>
-    </li>
-  </ul>
+    <div class="item">
+      <div class="item-date">2019</div>
+      <div class="item-body">
+        <div class="item-title">Outstanding Leader of the Chinese Student and Scholar Association</div>
+        <div class="item-org">Education Office, Embassy of the People’s Republic of China in the Kingdom of Belgium, Belgium</div>
+      </div>
+    </div>
 
-  <h3 class="subsection-title">Provincial Level</h3>
-  <ul class="cv-list">
-    <li class="cv-item">
-      <span class="cv-year">2014</span>
-      <span class="cv-main">Advanced University Teachers’ Ethics in Heilongjiang Province</span>
-      <span class="cv-meta">— Department of Education of Heilongjiang Province, China</span>
-    </li>
-  </ul>
+    <!-- Provincial -->
+    <h2 class="section-subtitle">Provincial Level</h2>
 
-  <h3 class="subsection-title">Municipal Level</h3>
-  <ul class="cv-list">
-    <li class="cv-item">
-      <span class="cv-year">2014</span>
-      <span class="cv-main">Excellent Communist Youth League Member</span>
-      <span class="cv-meta">— Daqing Oilfield Limited Company, China National Petroleum Corporation, China</span>
-    </li>
-    <li class="cv-item">
-      <span class="cv-year">2013</span>
-      <span class="cv-main">Third Prize in the Third National Defence Knowledge Competition of Daqing</span>
-      <span class="cv-meta">— Publicity Department of the CPC Daqing Municipal Committee &amp; Political Department of Daqing Military Subdistrict, China</span>
-    </li>
-  </ul>
+    <div class="item">
+      <div class="item-date">2014</div>
+      <div class="item-body">
+        <div class="item-title">Advanced University Teachers’ Ethics in Heilongjiang Province</div>
+        <div class="item-org">Department of Education of Heilongjiang Province, China</div>
+      </div>
+    </div>
 
-  <h3 class="subsection-title">University Level</h3>
-  <ul class="cv-list">
-    <li class="cv-item">
-      <span class="cv-year">2024</span>
-      <span class="cv-main">Awarded for Scientific Contributions</span>
-      <span class="cv-meta">— Faculty of Educational Sciences, University of Oslo, Norway</span>
-    </li>
+    <!-- Municipal -->
+    <h2 class="section-subtitle">Municipal Level</h2>
 
-    <li class="cv-item">
-      <span class="cv-year">2013</span>
-      <span class="cv-main">Outstanding Female Teacher of Daqing Vocational College</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
-    <li class="cv-item">
-      <span class="cv-year">2013</span>
-      <span class="cv-main">Annual Prize for Counsellor Touching Daqing Vocational College</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
-    <li class="cv-item">
-      <span class="cv-year">2013</span>
-      <span class="cv-main">Prize in the National Defence Knowledge Competition</span>
-      <span class="cv-meta">— Daqing Municipal Government, China</span>
-    </li>
+    <div class="item">
+      <div class="item-date">2014</div>
+      <div class="item-body">
+        <div class="item-title">Excellent Communist Youth League Member</div>
+        <div class="item-org">Daqing Oilfield Limited Company, China National Petroleum Corporation, China</div>
+      </div>
+    </div>
 
-    <li class="cv-item">
-      <span class="cv-year">2012</span>
-      <span class="cv-main">Excellent Young Staff of Daqing Vocational College</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
-    <li class="cv-item">
-      <span class="cv-year">2012</span>
-      <span class="cv-main">Excellent Class Tutor of Daqing Vocational College</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
-    <li class="cv-item">
-      <span class="cv-year">2012</span>
-      <span class="cv-main">Best Stage Presence at the Karaoke Contest of the Cultural and Art Festival</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
+    <div class="item">
+      <div class="item-date">2013</div>
+      <div class="item-body">
+        <div class="item-title">Third Prize in the Third National Defence Knowledge Competition of Daqing</div>
+        <div class="item-org">Publicity Department of the CPC Daqing Municipal Committee and Political Department of Daqing Military Subdistrict</div>
+      </div>
+    </div>
 
-    <li class="cv-item">
-      <span class="cv-year">2011</span>
-      <span class="cv-main">Excellent Counsellor of Daqing Vocational College</span>
-      <span class="cv-meta">— Daqing Vocational College, China</span>
-    </li>
+    <!-- University -->
+    <h2 class="section-subtitle">University Level</h2>
 
-    <li class="cv-item">
-      <span class="cv-year">2008</span>
-      <span class="cv-main">Excellent Intern</span>
-      <span class="cv-meta">— Harbin Normal University, China</span>
-    </li>
-  </ul>
-</section>
+    <div class="item">
+      <div class="item-date">2024</div>
+      <div class="item-body">
+        <div class="item-title">Awarded for Scientific Contributions</div>
+        <div class="item-org">Faculty of Educational Sciences, University of Oslo, Norway</div>
+      </div>
+    </div>
 
+    <div class="item">
+      <div class="item-date">2013</div>
+      <div class="item-body">
+        <div class="item-title">Outstanding Female Teacher of Daqing Vocational College</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
 
-    <!-- ===== footer contact (same as HOME) ===== -->
+    <div class="item">
+      <div class="item-date">2013</div>
+      <div class="item-body">
+        <div class="item-title">Annual Prize for Counsellor Touching Daqing Vocational College</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2013</div>
+      <div class="item-body">
+        <div class="item-title">Prize in the National Defence Knowledge Competition</div>
+        <div class="item-org">Daqing Municipal Government, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2012</div>
+      <div class="item-body">
+        <div class="item-title">Excellent Young Staff of Daqing Vocational College</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2012</div>
+      <div class="item-body">
+        <div class="item-title">Excellent Class Tutor of Daqing Vocational College</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2012</div>
+      <div class="item-body">
+        <div class="item-title">Best Stage-presence at the Karaoke Contest of Cultural and Art Festival</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2011</div>
+      <div class="item-body">
+        <div class="item-title">Excellent Counsellor of Daqing Vocational College</div>
+        <div class="item-org">Daqing Vocational College, China</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2008</div>
+      <div class="item-body">
+        <div class="item-title">Excellent Intern at Harbin Normal University</div>
+        <div class="item-org">Harbin Normal University, China</div>
+      </div>
+    </div>
+
+    <!-- Contact + booking (same as your other pages) -->
     <div class="rule" aria-hidden="true"></div>
 
     <h2 class="contact-title">Contact</h2>
