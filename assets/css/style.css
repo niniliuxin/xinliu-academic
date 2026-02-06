@@ -557,4 +557,14 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   color: #111827;
   text-align: center;
 }
+/* Force a new row in pill nav */
+.pillnav .nav-break{
+  flex-basis:100%;
+  height:0;
+}
+
+/* Optional: make long label look nicer */
+.pillnav a.compact .en{
+  letter-spacing: .18em;   /* 原来是 .30em，太长会很夸张 */
+}
 
