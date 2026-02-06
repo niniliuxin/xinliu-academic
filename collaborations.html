@@ -4,68 +4,98 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xin Liu • Collaborations</title>
-  <meta name="description" content="Xin Liu — international collaborations and academic network." />
+  <meta name="description" content="Xin Liu — international collaborations." />
   <link rel="icon" href="assets/images/profile.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Page-only styles (map layout). Keep or move into style.css -->
+  <!-- Page-only styles (so you don't need to touch style.css) -->
   <style>
-    .page-title{ margin: 52px 0 0; font-size: 26px; letter-spacing: .10em; text-transform: uppercase; color:#111827; }
-    .page-subtitle{ margin: 10px auto 0; max-width: 760px; color:#6b7280; font-size: 14px; line-height: 1.8; }
+    .page-title{
+      margin: 52px 0 0;
+      text-align: center;
+      font-size: 2px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+    .page-subtitle{
+      margin: 10px 0 0;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.8;
+    }
 
     .map-card{
-      margin: 22px auto 0;
-      width: min(920px, 100%);
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      background: #fff;
-      padding: 14px;
-    }
-    .map-wrap{
       position: relative;
-      width: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      background: #f3f4f6;
+      max-width: 960px;
+      margin: 22px auto 0;
     }
     .world-map{
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
     }
     .map-overlay{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      pointer-events:none;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      display:block;
     }
 
-    .key-list{
-      margin: 18px auto 0;
-      width: min(920px, 100%);
-      text-align: left;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px 18px;
-      padding: 0 6px;
+    .network-list-card{
+      max-width: 920px;
+      margin: 22px auto 0;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: #fff;
+      text-align: center;
     }
-    .key-list li{
-      margin-left: 18px;
-      color:#111827;
+    .section-title{
+      margin: 0 0 10px;
       font-size: 14px;
-      line-height: 1.8;
+      letter-spacing: .20em;
+      text-transform: uppercase;
+      color: #111827;
     }
-    @media (max-width:860px){
-      .key-list{ grid-template-columns: 1fr; }
+    .network-list{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1.9;
+      color: #111827;
+      font-size: 14px;
+    }
+    .network-list li{ margin: 2px 0; }
+
+    .footer-note{
+      margin-top: 26px;
+      color: #6b7280;
+      font-size: 12px;
+      text-align: center;
     }
   </style>
 </head>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xin Liu • Collaborations</title>
+  <meta name="description" content="Xin Liu — international collaborations." />
+  <link rel="icon" href="assets/images/profile.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
 <body>
   <main class="wrap">
-
     <nav class="pillnav" aria-label="Sections">
       <a class="" href="index.html">Home</a>
       <a class="" href="academic career.html">Academic Career</a>
@@ -81,43 +111,36 @@
 
     <div class="rule" aria-hidden="true"></div>
 
-    <h1 class="page-title">COLLABORATIONS</h1>
-    <p class="page-subtitle">
-      International collaboration footprint starting from Ningbo, China.
-    </p>
+    <section class="page">
+      <h2 class="page-title">COLLABORATIONS</h2>
+      <p class="page-subtitle">International collaboration footprint starting from Ningbo, China.</p>
 
-    <div class="map-card" aria-label="International collaboration map">
-      <div class="map-wrap">
-        <!-- If you want to use a local map image, replace src with your file, e.g. assets/images/world.png -->
-        <img
-          id="worldMapImg"
-          class="world-map"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/BlankMap-World-Equirectangular.svg/1200px-BlankMap-World-Equirectangular.svg.png"
-          alt="World map"
-          loading="lazy"
-        />
-        <svg id="collabMap" class="map-overlay" aria-hidden="true" preserveAspectRatio="none"></svg>
+      <div class="map-card" aria-label="Collaboration map">
+        <div class="map-wrap" id="mapWrap">
+          <!-- ✅ 改这里：换成你自己的世界地图底图文件名/路径 -->
+          <img id="worldMap" src="assets/images/world-map.png" alt="World map" />
+
+          <!-- overlay svg -->
+          <svg id="mapSvg" aria-hidden="true"></svg>
+        </div>
       </div>
 
-      <h2 style="margin:18px 0 8px; font-size:14px; letter-spacing:.35em; text-transform:uppercase; color:#374151;">
-        KEY COLLABORATION COUNTRIES/REGIONS
-      </h2>
-
-      <ul class="key-list" aria-label="Key collaboration countries/regions">
-        <li>Norway</li>
+      <h3 class="list-title">Key collaboration countries/regions</h3>
+      <ul class="collab-list" aria-label="Key collaboration countries/regions list">
         <li>Sweden</li>
+        <li>Norway</li>
         <li>Finland</li>
-        <li>Estonia</li>
-        <li>Serbia</li>
-        <li>United Kingdom</li>
-        <li>Singapore</li>
-        <li>United States</li>
-        <li>Netherlands</li>
         <li>Belgium</li>
         <li>Germany</li>
+        <li>Netherlands</li>
         <li>Portugal</li>
+        <li>Serbia</li>
+        <li>Estonia</li>
+        <li>United Kingdom</li>
+        <li>United States</li>
+        <li>Singapore</li>
       </ul>
-    </div>
+    </section>
 
     <div class="rule" aria-hidden="true"></div>
 
@@ -159,133 +182,168 @@
     </div>
 
     <div class="booking">
-      <a class="book-btn"
-         href="mailto:liuxin2@nbu.edu.cn?subject=Meeting%20Request%20%7C%20%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A&body=Hello%20Prof.%20Liu%2C%0A%0AI%20would%20like%20to%20request%20a%20meeting.%20My%20topic%3A%20%5B...%5D.%0APreferred%20time%20slots%3A%20%5B...%5D.%0A%0A%E5%88%98%E8%80%81%E5%B8%88%E6%82%A8%E5%A5%BD%EF%BC%8C%0A%0A%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A%EF%BC%8C%E4%B8%BB%E9%A2%98%EF%BC%9A%5B...%5D%EF%BC%8C%E5%8F%AF%E9%80%89%E6%97%B6%E9%97%B4%EF%BC%9A%5B...%5D%EF%BC%8C%E8%B0%A2%E8%B0%A2%EF%BC%81"
+      <a class="book-btn" href="mailto:liuxin2@nbu.edu.cn?subject=Meeting%20Request%20%7C%20%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A&body=Hello%20Prof.%20Liu%2C%0A%0AI%20would%20like%20to%20request%20a%20meeting.%20My%20topic%3A%20%5B...%5D.%0APreferred%20time%20slots%3A%20%5B...%5D.%0A%0A%E5%88%98%E8%80%81%E5%B8%88%E6%82%A8%E5%A5%BD%EF%BC%8C%0A%0A%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A%EF%BC%8C%E4%B8%BB%E9%A2%98%EF%BC%9A%5B...%5D%EF%BC%8C%E5%8F%AF%E9%80%89%E6%97%B6%E9%97%B4%EF%BC%9A%5B...%5D%EF%BC%8C%E8%B0%A2%E8%B0%A2%EF%BC%81"
          aria-label="Book a time / 预约时间">
         <span class="book-en">Request a meeting</span>
         <span class="book-cn">预约交流</span>
       </a>
     </div>
 
+    </p>
     <div class="rule" aria-hidden="true"></div>
     <p class="footer-note"><a href="index.html">Back to Home</a></p>
 
   </main>
 
   <script>
-    const svg = document.getElementById("collabMap");
-    const img = document.getElementById("worldMapImg");
+    // =========================
+    // 关键：这里是“对齐修正”
+    // 你的底图有边框/留白，所以要用 bounds 映射“有效地图区域”
+    // 如果宁波还是偏到日本：把 left 增大、right 减小（例如 0.06→0.08, 0.94→0.92）
+    // =========================
+    const MAP_BOUNDS = {
+      left: 0.06,   // ✅ 横向留白（越大：点越往中间收）
+      right: 0.94,
+      top: 0.08,    // ✅ 纵向留白
+      bottom: 0.92
+    };
 
-    function draw(){
-      const W = img.naturalWidth;
-      const H = img.naturalHeight;
+    const home = { name: "Ningbo", lat: 29.8683, lon: 121.5440 };
 
-      // Overlay coordinate system = image pixel coordinate system
+    // 按你要求的顺序（国家顺序），每个国家用一个代表城市坐标做落点
+    const points = [
+      { country: "Sweden",         city: "Gothenburg",   lat: 57.7089, lon: 11.9746 },
+      { country: "Norway",         city: "Oslo",         lat: 59.9139, lon: 10.7522 },
+      { country: "Finland",        city: "Helsinki",     lat: 60.1699, lon: 24.9384 },
+      { country: "Belgium",        city: "Ghent",        lat: 51.0543, lon: 3.7174  },
+      { country: "Germany",        city: "Hamburg",      lat: 53.5511, lon: 9.9937  },
+      { country: "Netherlands",    city: "Amsterdam",    lat: 52.3676, lon: 4.9041  },
+      { country: "Portugal",       city: "Lisbon",       lat: 38.7223, lon: -9.1393 },
+      { country: "Serbia",         city: "Belgrade",     lat: 44.7866, lon: 20.4489 },
+      { country: "Estonia",        city: "Tallinn",      lat: 59.4370, lon: 24.7536 },
+      { country: "United Kingdom", city: "Reading",      lat: 51.4543, lon: -0.9781 },
+      { country: "United States",  city: "Iowa City",    lat: 41.6611, lon: -91.5302},
+      { country: "Singapore",      city: "Singapore",    lat: 1.3521,  lon: 103.8198}
+    ];
+
+    const img = document.getElementById("worldMap");
+    const svg = document.getElementById("mapSvg");
+
+    function project(lon, lat, W, H) {
+      const x0 = W * MAP_BOUNDS.left;
+      const x1 = W * MAP_BOUNDS.right;
+      const y0 = H * MAP_BOUNDS.top;
+      const y1 = H * MAP_BOUNDS.bottom;
+
+      const x = x0 + ((lon + 180) / 360) * (x1 - x0);
+      const y = y0 + ((90 - lat) / 180) * (y1 - y0);
+      return { x, y };
+    }
+
+    function clearSvg() {
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+    }
+
+    function el(name, attrs = {}) {
+      const n = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+      return n;
+    }
+
+    function draw() {
+      const rect = img.getBoundingClientRect();
+      const W = rect.width;
+      const H = rect.height;
+
+      svg.setAttribute("width", W);
+      svg.setAttribute("height", H);
       svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-      svg.innerHTML = "";
+      svg.setAttribute("preserveAspectRatio", "none");
 
-      // Small padding compensation (tune if needed)
-      const padX = W * 0.012;
-      const padY = H * 0.035;
-      const innerW = W - padX * 2;
-      const innerH = H - padY * 2;
+      clearSvg();
 
-      function proj(lat, lon){
-        const x = padX + (lon + 180) / 360 * innerW;
-        const y = padY + (90 - lat) / 180 * innerH;
-        return {x, y};
-      }
-
-      function arcPath(a, b){
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
-        const mx = (a.x + b.x) / 2;
-        const lift = Math.min(H * 0.28, H * 0.08 + Math.hypot(dx, dy) * 0.18);
-        const cy = Math.min(a.y, b.y) - lift;
-        return `M ${a.x.toFixed(1)} ${a.y.toFixed(1)} Q ${mx.toFixed(1)} ${cy.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
-      }
-
-      // Arrow marker
-      const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
-      defs.innerHTML = `
-        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
-                markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"></path>
-        </marker>
-      `;
+      // defs: arrow marker
+      const defs = el("defs");
+      const marker = el("marker", {
+        id: "arrow",
+        markerWidth: "7",
+        markerHeight: "7",
+        refX: "6",
+        refY: "3.5",
+        orient: "auto",
+        markerUnits: "strokeWidth"
+      });
+      marker.appendChild(el("path", { d: "M0,0 L7,3.5 L0,7 Z", fill: "#9ca3af" }));
+      defs.appendChild(marker);
       svg.appendChild(defs);
 
-      const points = [
-        {name:"Ningbo, China", lat:29.8683, lon:121.5440, home:true},
+      const gLines = el("g");
+      const gDots = el("g");
+      const gLabels = el("g");
 
-        {name:"Gothenburg, Sweden", lat:57.7089, lon:11.9746},
-        {name:"Oslo, Norway", lat:59.9139, lon:10.7522},
-        {name:"Helsinki, Finland", lat:60.1699, lon:24.9384},
-        {name:"Brussels, Belgium", lat:50.8503, lon:4.3517},
-        {name:"Belgrade, Serbia", lat:44.7866, lon:20.4489},
-        {name:"Tallinn, Estonia", lat:59.4370, lon:24.7536},
-        {name:"Lisbon, Portugal", lat:38.7223, lon:-9.1393},
-        {name:"Berlin, Germany", lat:52.5200, lon:13.4050},
-        {name:"London, United Kingdom", lat:51.5074, lon:-0.1278},
-        {name:"Washington, DC, USA", lat:38.9072, lon:-77.0369},
-        {name:"Singapore", lat:1.3521, lon:103.8198},
-        {name:"Amsterdam, Netherlands", lat:52.3676, lon:4.9041},      
-      ];
+      const pHome = project(home.lon, home.lat, W, H);
 
-      const home = points.find(p => p.home);
-      const A = proj(home.lat, home.lon);
+      // lines + destination dots
+      points.forEach(p => {
+        const pDest = project(p.lon, p.lat, W, H);
 
-      const gLines = document.createElementNS("http://www.w3.org/2000/svg","g");
-      const gDots  = document.createElementNS("http://www.w3.org/2000/svg","g");
-      const gText  = document.createElementNS("http://www.w3.org/2000/svg","g");
+        // curved path
+        const midX = (pHome.x + pDest.x) / 2;
+        const lift = Math.max(30, Math.abs(pDest.x - pHome.x) * 0.12);
+        const ctrlY = Math.min(pHome.y, pDest.y) - lift;
 
-      // Lines
-      points.filter(p => !p.home).forEach(p=>{
-        const B = proj(p.lat, p.lon);
-
-        const path = document.createElementNS("http://www.w3.org/2000/svg","path");
-        path.setAttribute("d", arcPath(A, B));
-        path.setAttribute("fill","none");           // IMPORTANT: prevents the black blob
-        path.setAttribute("stroke","#9ca3af");
-        path.setAttribute("stroke-width","1.2");
-        path.setAttribute("opacity","0.75");
-        path.setAttribute("stroke-linecap","round");
-        path.setAttribute("marker-end","url(#arrow)");
-
+        const d = `M ${pHome.x} ${pHome.y} Q ${midX} ${ctrlY} ${pDest.x} ${pDest.y}`;
+        const path = el("path", {
+          d,
+          fill: "none",
+          stroke: "#b6bcc6",
+          "stroke-width": "1.2",
+          "stroke-linecap": "round",
+          "marker-end": "url(#arrow)",
+          opacity: "0.95"
+        });
         gLines.appendChild(path);
+
+        const dot = el("circle", {
+          cx: pDest.x,
+          cy: pDest.y,
+          r: "3.2",
+          fill: "#374151",
+          opacity: "0.95"
+        });
+        gDots.appendChild(dot);
       });
 
-      // Dots + Ningbo label
-      points.forEach(p=>{
-        const P = proj(p.lat, p.lon);
-
-        const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
-        c.setAttribute("cx", P.x);
-        c.setAttribute("cy", P.y);
-        c.setAttribute("r", p.home ? "4.6" : "3.0");
-        c.setAttribute("fill", p.home ? "#111827" : "#374151");
-        c.setAttribute("opacity", p.home ? "0.95" : "0.75");
-        gDots.appendChild(c);
-
-        if(p.home){
-          const t = document.createElementNS("http://www.w3.org/2000/svg","text");
-          t.setAttribute("x", P.x + 8);
-          t.setAttribute("y", P.y - 8);
-          t.setAttribute("font-size","12");
-          t.setAttribute("fill","#111827");
-          t.setAttribute("font-family","system-ui, -apple-system, Segoe UI, Roboto, Arial");
-          t.textContent = "Ningbo";
-          gText.appendChild(t);
-        }
+      // home dot
+      const homeDot = el("circle", {
+        cx: pHome.x, cy: pHome.y, r: "4.2",
+        fill: "#111827"
       });
+      gDots.appendChild(homeDot);
+
+      // home label
+      const label = el("text", {
+        x: pHome.x + 10,
+        y: pHome.y - 10,
+        fill: "#111827",
+        "font-size": "12",
+        "font-family": "system-ui, -apple-system, Segoe UI, Roboto, Arial"
+      });
+      label.textContent = "Ningbo";
+      gLabels.appendChild(label);
 
       svg.appendChild(gLines);
       svg.appendChild(gDots);
-      svg.appendChild(gText);
+      svg.appendChild(gLabels);
     }
 
-    if (img.complete) draw();
-    else img.addEventListener("load", draw);
+    function ready() {
+      draw();
+      window.addEventListener("resize", draw);
+    }
+
+    if (img.complete) ready();
+    else img.addEventListener("load", ready);
   </script>
 
 </body>
