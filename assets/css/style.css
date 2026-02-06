@@ -473,4 +473,46 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   line-height: 1.8;
   text-align: justify;
 }
+/* Awards page: subsection headings */
+.subsection-title{
+  margin: 26px 0 10px;
+  font-size: 13px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color:#374151;
+  text-align: center;
+}
+
+/* If you already have these, you can ignore duplicates */
+.cv-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.cv-item{
+  margin: 0 0 14px;
+  line-height: 1.95;
+  color:#111827;
+  font-size: 16px;
+}
+
+.cv-year{
+  display:inline-block;
+  min-width: 90px;
+  color:#6b7280;
+  font-size: 14px;
+}
+
+.cv-main{
+  font-weight: 500;
+  color:#111827;
+}
+
+.cv-meta{
+  color:#6b7280;
+  font-size: 14px;
+}
 
